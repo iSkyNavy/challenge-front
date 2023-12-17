@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 
 export const Header = () => {
-  const menuList = [
+  const menuModulesList = [
     {
       label: "Dashboard",
       active: false,
@@ -27,15 +27,48 @@ export const Header = () => {
     <header>
       <div className={styles.HeaderContainer}>
         <div className={styles.HeaderContainerModules}>
-          <img src="/mandu_logo_white.svg" />
-          {menuList.map((menu, i) => (
-            <div>
-              <span key={i}>{menu.label}</span>
-              {menu.select && <img src="/arrow.svg" />}
+          <div className={styles.HeaderContainerModule}>
+            <img src="/mandu_logo_white.svg" />
+            <div className={styles.VerticalLine}></div>
+          </div>
+          {menuModulesList.map((menu, i) => (
+            <div className={styles.HeaderContainerModule}>
+              <div
+                className={`${styles.HeaderContainerModuleButton} ${
+                  menu.active && styles.HeaderContainerModuleButtonActive
+                }`}
+              >
+                <span key={i}>{menu.label}</span>
+                {menu.select && <img src="/arrow.svg" />}
+              </div>
+              <div className={styles.VerticalLine}></div>
             </div>
           ))}
         </div>
-        <div></div>
+        <div className={styles.HeaderContainerActionsContent}>
+          <div className={styles.HeaderContainerActions}>
+            <div className={styles.HeaderContainerAction}>
+              <img src="/work.svg" />
+              <div className={styles.VerticalLine}></div>
+            </div>
+            <div className={styles.HeaderContainerAction}>
+              <img src="/question.svg" />
+              <div className={styles.VerticalLine}></div>
+            </div>
+            <div className={styles.HeaderContainerAction}>
+              <img src="/notification.png" />
+              <div className={styles.VerticalLine}></div>
+            </div>
+          </div>
+          <div className={styles.HeaderContainerActionUser}>
+            <img src="/logo_admin.png" width={38} height={38} />
+            <span>Administrador</span>
+            <img src="/arrow.svg" />
+          </div>
+          <div className={styles.HeaderContainerActionLogo}>
+            <img src="/mandu_logo_black.svg" />
+          </div>
+        </div>
       </div>
     </header>
   );
