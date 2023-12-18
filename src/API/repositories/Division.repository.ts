@@ -16,6 +16,17 @@ class DivisionRepository extends PublicApi {
         const { data } = this.success(response);
         return data;
     }
+    public async getDivisionsName(): Promise<string[]> {
+        const response = await this.get<IApiResponse<string[]>>(`${this.prefix}/names`);
+        const { data } = this.success(response);
+        return data;
+    }
+
+    public async getDivisionsSuperiorName(): Promise<string[]> {
+        const response = await this.get<IApiResponse<string[]>>(`${this.prefix}/superior/names`);
+        const { data } = this.success(response);
+        return data;
+    }
 }
 
 export const divisionRepository = new DivisionRepository();

@@ -23,21 +23,3 @@ interface IMetaLink {
     label: string;
     active: boolean
 }
-export interface IDepartament {
-    id: number;
-    name: string;
-}
-export interface IProvince {
-    id: number;
-    name: string;
-    departament_id: number;
-    departament: IDepartament;
-}
-export interface IDistrict {
-    id: number;
-    name: string;
-    province_id: number;
-    departament_id: number;
-    province: IProvince;
-    departament: IDepartament;
-}

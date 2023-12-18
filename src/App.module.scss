@@ -1,0 +1,21 @@
+.TabsHeader {
+    padding: 19px 25px 8px
+}
+
+.TabsHeaderTitle {
+    color: #555155;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.TabsActions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 4px;
+    position: absolute;
+    right: 25px;
+}

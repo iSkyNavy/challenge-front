@@ -1,3 +1,4 @@
+import { Separator } from "../Separator";
 import styles from "./index.module.scss";
 
 export const Header = () => {
@@ -29,7 +30,7 @@ export const Header = () => {
         <div className={styles.HeaderContainerModules}>
           <div className={styles.HeaderContainerModule}>
             <img src="/mandu_logo_white.svg" />
-            <div className={styles.VerticalLine}></div>
+            <Separator />
           </div>
           {menuModulesList.map((menu, i) => (
             <div className={styles.HeaderContainerModule}>
@@ -41,7 +42,8 @@ export const Header = () => {
                 <span key={i}>{menu.label}</span>
                 {menu.select && <img src="/arrow.svg" />}
               </div>
-              <div className={styles.VerticalLine}></div>
+
+              <Separator />
             </div>
           ))}
         </div>
@@ -49,15 +51,18 @@ export const Header = () => {
           <div className={styles.HeaderContainerActions}>
             <div className={styles.HeaderContainerAction}>
               <img src="/work.svg" />
-              <div className={styles.VerticalLine}></div>
+
+              <Separator />
             </div>
             <div className={styles.HeaderContainerAction}>
               <img src="/question.svg" />
-              <div className={styles.VerticalLine}></div>
+
+              <Separator />
             </div>
             <div className={styles.HeaderContainerAction}>
               <img src="/notification.png" />
-              <div className={styles.VerticalLine}></div>
+
+              <Separator />
             </div>
           </div>
           <div className={styles.HeaderContainerActionUser}>

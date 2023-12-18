@@ -1,0 +1,43 @@
+.Table {
+    padding: 17px 32px 0;
+    background-color: #F9F9F9;
+}
+
+.RadioButton {
+    color: #A6A6A6;
+}
+
+.RadioButtonActive {
+    color: #2694FC !important;
+    background-color: #EEF3FA !important;
+}
+
+.SubDivisionCol {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    span {
+        text-decoration-line: underline
+    }
+}
+
+.ButtonPluss {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    background: rgba(73, 197, 169, 0.90);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TotalText {
+    color: #979797;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

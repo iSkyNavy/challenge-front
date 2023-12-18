@@ -2,6 +2,9 @@ import { ILinkPagination, IMetaPagination, MetParams } from "./General";
 
 export interface DivisionParams extends MetParams {
     id?: number;
+    name?: string | string[];
+    divisionSuperiorName?: string | string[];
+    sort?: string;
 }
 export interface IDivisionWithPagination {
     data: IDivision[];
